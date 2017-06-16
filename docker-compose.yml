@@ -1,0 +1,16 @@
+version: '3'
+services:
+  # services
+  postgres:
+    image: postgres:9.6.2-alpine
+    environment:
+      POSTGRES_USER: thegillis
+      POSTGRES_PASSWORD: thegillis
+      POSTGRES_DB: widget_market_development
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgvolume:/var/lib/postgresql/data
+volumes:
+  pgvolume: {}
+
