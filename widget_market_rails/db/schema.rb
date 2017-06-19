@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170616130438) do
+ActiveRecord::Schema.define(version: 20170619155620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rails_schema_migrations", primary_key: "version", id: :string, force: :cascade do |t|
+  end
 
   create_table "widgets", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.integer "price_cents"
     t.string "upc"
-    t.datetime "created_at", null: false
+    t.datetime "inserted_at", null: false
     t.datetime "updated_at", null: false
     t.index ["upc"], name: "index_widgets_on_upc", unique: true
   end

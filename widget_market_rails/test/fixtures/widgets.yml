@@ -5,9 +5,11 @@ one:
   description: MyText
   price_cents: 1
   upc: 1234
+  inserted_at: now
 
 two:
   name: Product Two
   description: MyText
   price_cents: 1
   upc: 9999
+  inserted_at: now
