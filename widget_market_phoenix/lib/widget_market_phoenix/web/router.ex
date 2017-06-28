@@ -20,7 +20,9 @@ defmodule WidgetMarketPhoenix.Web.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", WidgetMarketPhoenix.Web do
-  #   pipe_through :api
-  # end
+  scope "/v2", WidgetMarketPhoenix.Web do
+    pipe_through :api
+
+    resources "/widgets", WidgetController
+  end
 end
