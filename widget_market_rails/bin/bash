@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+if [ ! -f "/.dockerenv" ]; then
+  docker-compose run --entrypoint "/bin/bash" --rm widget_market_rails $@
+else
+  echo "Not applicable outside a Docker development environment."
+fi
