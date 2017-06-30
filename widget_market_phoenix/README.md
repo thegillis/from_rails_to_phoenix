@@ -18,3 +18,13 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## Manual Build Notes
+
+```
+cd assets && ./node_modules/brunch/bin/brunch b -p && cd ../
+MIX_ENV=prod mix do phx.digest, release --env=prod
+
+REPLACE_OS_VARS=true PORT=4000 DB_USER=thegillis DB_PASS=thegillis DB_NAME=widget_market_development DB_HOST=localhost _build/prod/rel/widget_market_phoenix/bin/widget_market_phoenix foreground
+```
+

@@ -19,6 +19,20 @@ services:
       DB_USER: thegillis
       DB_PASS: thegillis
 
+  widget_market_phoenix:
+    image: thegillis/widget_market_phoenix:release
+    depends_on:
+      - postgres
+    ports:
+      - '4000:4000'
+    environment:
+      PORT: 4000
+      DB_NAME: widget_market_development
+      DB_HOST: postgres
+      DB_USER: thegillis
+      DB_PASS: thegillis
+    command: [foreground]
+
   postgres:
     image: postgres:9.6.2-alpine
     environment:
