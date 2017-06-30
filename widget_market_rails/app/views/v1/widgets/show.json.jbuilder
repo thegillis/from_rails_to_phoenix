@@ -1,1 +1,1 @@
-json.partial! "widgets/widget", widget: @widget
+json.partial! "v1/widgets/widget", widget: @widget
