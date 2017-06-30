@@ -1,5 +1,6 @@
 defmodule WidgetMarketPhoenix.Web.Router do
   use WidgetMarketPhoenix.Web, :router
+  use Terraform, terraformer: WidgetMarketPhoenix.ReverseProxy.Terraformers.RailsApi
 
   pipeline :browser do
     plug :accepts, ["html"]

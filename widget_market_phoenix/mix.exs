@@ -38,7 +38,8 @@ defmodule WidgetMarketPhoenix.Mixfile do
      {:cowboy, "~> 1.0"},
      {:terraform, "~> 1.0.1"},
      {:distillery, "~> 1.4"},
-     {:mix_docker, "~> 0.5.0"}]
+     {:mix_docker, "~> 0.5.0"},
+     {:httpoison, "~> 0.12"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
